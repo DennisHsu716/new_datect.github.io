@@ -2,6 +2,7 @@
 ## 📌 Project Overview
 This project demonstrates a fake news detection pipeline using a baseline TF-IDF + Logistic Regression model and an advanced RoBERTa fine-tuning approach with Hugging Face Transformers, with the dataset stored in Google Drive and processed in Google Colab
 ## 📂 Repository Structure
+```
 fake-news/  
 │  
 ├── config/                  # Config files (optional)  
@@ -18,7 +19,8 @@ fake-news/
 │   ├── baseline.json  
 │   └── roberta_metrics.json  
 │
-└── app/                     # (Optional) App integration  
+└── app/                     # (Optional) App integration
+```
 
 ## 📂 Dataset Structure
 ```
