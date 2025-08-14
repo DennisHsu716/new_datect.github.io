@@ -30,4 +30,50 @@ data/
 │── processed/
 │   └── dataset.jsonl
 ```
+* text → News article content
 
+* label → ```0``` for real news, ```1``` for fake news
+
+## ⚙ Environment Setup
+```
+pip install -U pandas numpy scikit-learn transformers datasets
+```
+## 🚀 Steps to Run
+1️⃣ Data Preparation
+```
+python src/prepare.py \
+  --input data/raw/news.csv \
+  --out data/processed/dataset.jsonl
+```
+2️⃣ Baseline Model (TF-IDF + Logistic Regression)
+```
+python src/baseline.py \
+  --input data/processed/dataset.jsonl \
+  --out runs/baseline.json
+```
+3️⃣ Transformer Fine-Tuning (RoBERTa)
+```
+python src/transformer_ft.py \
+  --input data/processed/dataset.jsonl \
+  --model_name roberta-base \
+  --epochs 2 \
+  --out runs/roberta_metrics.json
+```
+## 📊 Example Output
+
+Baseline:
+```
+{"f1": 0.82}
+```
+
+Transformer:
+```
+{"eval_loss": 0.45, "eval_accuracy": 0.87, "eval_f1": 0.85}
+```
+## 📌 Future Improvements
+
+* Increase dataset size for better model performance
+
+* Apply advanced text augmentation techniques
+
+* Experiment with larger models (e.g., roberta-large, deberta-v3-base)
