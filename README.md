@@ -1,6 +1,9 @@
 # 📰 Fake News Detection AI – NLP & Deep Learning                
 ## 📌 Project Overview
 This project demonstrates a fake news detection pipeline using a baseline TF-IDF + Logistic Regression model and an advanced RoBERTa fine-tuning approach with Hugging Face Transformers, with the dataset stored in Google Drive and processed in Google Colab
+
+**Run in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10jFYzz_ifbiOKz8_8ayP9hr4m4IlhtAz?usp=sharing)
+
 ## 📂 Repository Structure
 ```
 fake-news/  
