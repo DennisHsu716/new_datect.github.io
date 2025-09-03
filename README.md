@@ -30,8 +30,8 @@ fake-news/
 data/
 │── raw/
 │   └── news.csv             # Contains text + label
-│── processed/
-│   └── dataset.jsonl
+└── processed/
+    └── dataset.jsonl
 ```
 * text → News article content
 
